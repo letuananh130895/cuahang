@@ -50,6 +50,11 @@ Route::get('search.html','HomeController@search');
 Route::get('timkiem.html','HomeController@timkiem')->name('search');
 Route::get('lienhe.html','HomeController@getLienHe')->name('lienhe');
 Route::post('lienhe.html','HomeController@postLienHe');
+
+/* Comment */
+
+Route::post('comment/{product_id}','CommentController@create');
+
 //route for admin
 Route::group(['prefix' => 'admin','middleware' => 'admin_login'],function (){
     Route::get('home/index.html','admin\HomeController@index')->name('index');

@@ -48,7 +48,7 @@ class HomeController extends Controller
             'product' => $product,
             'sanphamtt' => $sanphamtt,
             'new_product' => $new_product,
-            'bestsell' => $bestsell
+            'bestsell' => $bestsell,
         ]);
     }
     //
