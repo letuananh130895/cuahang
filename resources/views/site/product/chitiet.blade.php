@@ -128,54 +128,54 @@
                             </div>
                         </div> <!-- .beta-products-list -->
                     </div>
-                    <div class="col-sm-3 aside">
-                        <div class="widget">
-                            <h3 class="widget-title">Sản phẩm bán chạy</h3>
-                            <div class="widget-body">
-                                <div class="beta-sales beta-lists">
-                                    @foreach($bestsell as $row)
-                                        <div class="media beta-sales-item">
-                                            <a class="pull-left" href="{{route('chitiet',['id' => $row->id])}}"><img
-                                                        src="source/image/product/{{$row->image}}" alt=""></a>
-                                            <div class="media-body">
-                                                <p>{{$row->name}}</p>
-                                                @if($row->promotion_price == 0)
-                                                    <span class="beta-sales-price">{{number_format($row->unit_price)}}
-                                                        VNĐ</span>
-                                                @else
-                                                    <span class="beta-sales-price">{{number_format($row->promotion_price)}}
-                                                        VNĐ</span>
-                                                @endif
-                                            </div>
+                </div>
+                <div class="col-sm-3 aside">
+                    <div class="widget">
+                        <h3 class="widget-title">Sản phẩm bán chạy</h3>
+                        <div class="widget-body">
+                            <div class="beta-sales beta-lists">
+                                @foreach($bestsell as $row)
+                                    <div class="media beta-sales-item">
+                                        <a class="pull-left" href="{{route('chitiet',['id' => $row->id])}}"><img
+                                                    src="source/image/product/{{$row->image}}" alt=""></a>
+                                        <div class="media-body">
+                                            <p>{{$row->name}}</p>
+                                            @if($row->promotion_price == 0)
+                                                <span class="beta-sales-price">{{number_format($row->unit_price)}}
+                                                    VNĐ</span>
+                                            @else
+                                                <span class="beta-sales-price">{{number_format($row->promotion_price)}}
+                                                    VNĐ</span>
+                                            @endif
                                         </div>
-                                    @endforeach
-                                </div>
+                                    </div>
+                                @endforeach
                             </div>
-                        </div> <!-- best sellers widget -->
-                        <div class="widget">
-                            <h3 class="widget-title">Sản phẩm mới</h3>
-                            <div class="widget-body">
-                                <div class="beta-sales beta-lists">
-                                    @foreach($new_product as $row)
-                                        <div class="media beta-sales-item">
-                                            <a class="pull-left" href="{{route('chitiet',['id' => $row->id])}}"><img
-                                                        src="source/image/product/{{$row->image}}" alt=""></a>
-                                            <div class="media-body">
-                                                <p>{{$row->name}}</p>
-                                                @if($row->promotion_price == 0)
-                                                    <span class="beta-sales-price">{{number_format($row->unit_price)}}
-                                                        VNĐ</span>
-                                                @else
-                                                    <span class="beta-sales-price">{{number_format($row->promotion_price)}}
-                                                        VNĐ</span>
-                                                @endif
-                                            </div>
+                        </div>
+                    </div> <!-- best sellers widget -->
+                    <div class="widget">
+                        <h3 class="widget-title">Sản phẩm mới</h3>
+                        <div class="widget-body">
+                            <div class="beta-sales beta-lists">
+                                @foreach($new_product as $row)
+                                    <div class="media beta-sales-item">
+                                        <a class="pull-left" href="{{route('chitiet',['id' => $row->id])}}"><img
+                                                    src="source/image/product/{{$row->image}}" alt=""></a>
+                                        <div class="media-body">
+                                            <p>{{$row->name}}</p>
+                                            @if($row->promotion_price == 0)
+                                                <span class="beta-sales-price">{{number_format($row->unit_price)}}
+                                                    VNĐ</span>
+                                            @else
+                                                <span class="beta-sales-price">{{number_format($row->promotion_price)}}
+                                                    VNĐ</span>
+                                            @endif
                                         </div>
-                                    @endforeach
-                                </div>
+                                    </div>
+                                @endforeach
                             </div>
-                        </div> <!-- best sellers widget -->
-                    </div>
+                        </div>
+                    </div> <!-- best sellers widget -->
                 </div>
             </div> <!-- #content -->
         </div> <!-- .container -->
