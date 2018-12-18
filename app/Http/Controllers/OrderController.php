@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderProduct;
 use App\Order;
 use App\OrderDetail;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Cart;
+use Illuminate\Support\Facades\Mail;
+
 class OrderController extends Controller
 {
     //
@@ -37,6 +40,7 @@ class OrderController extends Controller
             $order->save();
         }
         Cart::destroy();
+        Mail::to('vunv@kaopiz.com')->send(new OrderProduct());
         return redirect('dat-hang.html')->with('thongbao','Cảm ơn bạn đã đặt hàng sản phẩm của chúng tôi!');
     }
 }
